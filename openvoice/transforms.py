@@ -1,7 +1,6 @@
 import torch
-from torch.nn import functional as F
-
 import numpy as np
+from torch.nn import functional as F
 
 
 DEFAULT_MIN_BIN_WIDTH = 1e-3
@@ -37,7 +36,7 @@ def piecewise_rational_quadratic_transform(
         min_bin_width=min_bin_width,
         min_bin_height=min_bin_height,
         min_derivative=min_derivative,
-        **spline_kwargs
+        **spline_kwargs,
     )
     return outputs, logabsdet
 
